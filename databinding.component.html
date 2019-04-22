@@ -1,0 +1,84 @@
+<div class="row`">
+  <div class="col-12">
+    <h1 class="text-center">{{title}}</h1>
+    <hr>
+    <div>Calling Method With Interpolation: {{addTwoNumbers()}}</div>
+    <hr>
+    Property Binding [src]: <img [src]="imgUrl" alt="" width="60px">
+    Property Binding bind-src: <img bind-src="imgUrl" alt="" width="60px">
+    <hr>
+    <div (click)="onDivClick()">
+      div
+      <button (click)="onSave($event)" class="btn btn-primary ml-2">Save console message current location
+        object</button>
+    </div>
+    <h2>Event Filtering Demo</h2>
+    <input (keyup.enter)="onPressEnter($event)" />
+    <hr>
+    <input type="text" name="name" [(ngModel)]="name">
+    <label>Your Name is: {{name}}</label>
+    <hr>
+    <button class="btn btn-warning" [disabled]="currentFlag == 'enabled'" (click)="currentValue()">Disabled/Enabled
+      property-binding</button>
+    <button class="btn btn-warning" disabled="{{false}}" (click)="currentValue()">Disabled/Enabled
+      Interpolation-binding</button>
+    <hr>
+    <input type="text" name="name" bind-value="name">
+    <input type="text" name="name" value="{{name}}">
+    <input type="text" name="name" value="{{addTwoNumbers()}}">
+
+    <hr>
+    <div>{{fullname()}}</div>
+    <hr>
+    <div class="{{alertClass}}">Hi alert from Interpolation</div>
+    <hr>
+    <span id="message" title="Message" style="font-style: italic; color: #FF0000;">This city is beautiful!</span>
+    <hr>
+    <span [innerHtml]='html'></span>
+    <hr>
+    <span [style.color]='color' [style.fontSize]='size' [style.fontStyle]='fontStyle'>This span is red.</span>
+    <hr>
+    <button class='btn' [class.btn-primary]='isPrimary' [class.btn-danger]='!isPrimary'
+      (click)="toggleBtn()">Submit</button>
+
+    <hr>
+
+    <div class="row form-group align-items-center justify-content-center" *ngFor="let data of InlineEditData">
+      <input type="text" name="" id="" class="col-2 input-disabled" [(ngModel)]="data.Name"
+        [ngClass]="{'form-control': isInlineEdit}" [ngStyle]="{'border': isInlineEdit == false ? 'none':''}"
+        [disabled]="!isInlineEdit">
+      <input type="text" name="" id="" class="col-3 input-disabled" [(ngModel)]="data.Level"
+        [ngClass]="{'form-control': isInlineEdit}" [ngStyle]="{'border': isInlineEdit == false ? 'none':''}"
+        [disabled]="!isInlineEdit">
+      <input type="text" name="" id="" class="col-3 input-disabled" [(ngModel)]="data.Description"
+        [ngClass]="{'form-control': isInlineEdit}" [ngStyle]="{'border': isInlineEdit == false ? 'none':''}"
+        [disabled]="!isInlineEdit">
+      <div class="col-2">
+        <button class="btn btn-outline-primary btn-sm ml-2" (click)="onInlineEdit(data)">Edit</button>
+        <button class="btn btn-outline-primary btn-sm ml-2" (click)="onInlineUpdate(data)">Update</button>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+  </div>
+</div>

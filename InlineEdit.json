@@ -1,0 +1,22 @@
+{
+    "InlineEdit": [
+        {
+            "Name": "Premium",
+            "id": 1,
+            "Level": "Level-1",
+            "Description": "Premium Membership Des"
+        },
+        {
+            "Name": "Gold",
+            "id": 2,
+            "Level": "Level-2",
+            "Description": "Premium Membership Des"
+        },
+        {
+            "Name": "Silver",
+            "id": 3,
+            "Level": "Level-3",
+            "Description": "Silver Membership Des"
+        }
+    ]
+}
